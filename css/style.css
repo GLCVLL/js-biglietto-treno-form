@@ -9,3 +9,7 @@ body{
     color: #b91450;
     text-align: center;
 }
+
+.my-ticket{
+    display: none;
+}
