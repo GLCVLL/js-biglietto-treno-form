@@ -15,3 +15,15 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 
 
+MARKDOW
+
+0. Recupero elemento dal DOM
+0. costo biglietto a km 0.21€
+1. Chiediamo il nome all'utente
+2. Chiediamo il cognonome all'utente
+3. Chiediamo quanti km percorrerà l'utente
+4. chiediamo l'età dell'utente
+5. calcolo il prezzo del biglietto in base ai km
+6. calcolo il prezzo del biglietto in base all'età con rispettivi sconti
+7. inserisco nell'elemento il risultato finale
+8. stampo in pagina il risultato
