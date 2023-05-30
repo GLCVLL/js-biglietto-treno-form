@@ -21,27 +21,27 @@ console.log(paragraph);
 const myTicket = document.querySelector('.my-ticket');
 console.log(myTicket);
 
+const ticketField = document.getElementById('ticket-price');
+const cabElement = document.getElementById('cab');
+const pnrElement = document.getElementById('pnr');
 
 // ADD KM PRICE
 
-let kmPrice = 0.21;
-
-// DISCOUNT
-
-let discount = null
-
+const kmPrice = 0.21;
 
 // GET DATA FROM USER
 
 buttonS.addEventListener('click', function(){
     // RECUPERO VALORE
-    const name = inputN.value;
-    const kms = inputK.value;
-    const age = inputA.value;
+    const name = inputN.value.trim();
+    const kms = parseInt(inputK.value);
+    const age = parseInt(inputA.value);
 
     //CHANGE DISPLAY
 
     myTicket.style.display = 'flex';
+
+    paragraph.innerText = name;
 
 // calculating ticket price based on km
 
@@ -50,7 +50,27 @@ buttonS.addEventListener('click', function(){
 
     // calculating discount
 
+    let discount = 0;
+
     if(age >= 65) discount = 40;
     else if(age <= 18) discount = 20;
+
+    if (discount) {
+        price -= (price * discount) / 100;
+    }
+
+    // randomized cab
+
+    const cab = Math.floor(Math.random() * 12) + 1;
+
+    //randomized pnr
+
+    const pnr = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+
+    //print elements on th ticket
+
+    ticketField.innerText = '€' + price.toFixed(2);
+    cabElement.innerText = cab;
+    pnrElement.innerText = pnr;
 });
 
